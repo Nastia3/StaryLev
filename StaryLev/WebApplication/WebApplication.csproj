@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.15" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="HotChocolate" Version="12.11.1" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="12.11.1" />
+    <PackageReference Include="HotChocolate.Data.MongoDb" Version="12.11.1" />
+    <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.11.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\MongoDb\MongoDb.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="HotChocolate" />
+    <None Remove="HotChocolate.AspNetCore" />
+    <None Remove="HotChocolate.AspNetClassic.Authorization" />
+    <None Remove="HotChocolate.Data.MongoDb" />
+    <None Remove="HotChocolate.AspNetCore.Authorization" />
+  </ItemGroup>
+</Project>
